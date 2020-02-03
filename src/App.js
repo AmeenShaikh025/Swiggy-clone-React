@@ -5,14 +5,33 @@ import Navbar from "./components/Navbar";
 import Carouselhome from "./components/Carouselhome";
 import Membershipmenu from "./components/Membershipmenu";
 import Category from "./components/Category";
+import Restaurantcarousel from "./components/Restaurantcarousel";
+import RestaurantMenu from "./components/RestaurantMenu";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Carouselhome />
-      <Membershipmenu />
-      <Category />
+      <Switch>
+        <Redirect exact from="/" to="/restaurants" />
+        <Route path="/restaurants" exact>
+          <Carouselhome />
+          <Membershipmenu />
+          <Category />
+        </Route>
+        <Route path="/restaurants/:rname">
+          <Restaurantcarousel />
+          <RestaurantMenu />
+        </Route>
+      </Switch>
     </>
   );
 }
