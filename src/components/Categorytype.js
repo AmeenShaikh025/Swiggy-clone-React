@@ -7,10 +7,10 @@ import filterSeal from "../images/filter-seall.png";
 class Categorytype extends Component {
   render() {
     return (
-      <div class="filter-type">
-        <div class="filter-itemlist">
-          <div class="filter-item active" href="#filter1">
-            <div class="fliter-data-img">
+      <div className="filter-type">
+        <div className="filter-itemlist">
+          <div className="filter-item active" href="#filter1">
+            <div className="fliter-data-img">
               <img
                 src={filterImg2}
                 width="50px"
@@ -18,13 +18,13 @@ class Categorytype extends Component {
                 alt="popular brands"
               />
             </div>
-            <div class="filter-data-text">
-              <div class="heading">Popular Brands</div>
-              <div class="para">114 OPTIONS</div>
+            <div className="filter-data-text">
+              <div className="heading">Popular Brands</div>
+              <div className="para">114 OPTIONS</div>
             </div>
           </div>
-          <div class="filter-item" href="#filter2">
-            <div class="fliter-data-img">
+          <div className="filter-item" href="#filter2">
+            <div className="fliter-data-img">
               <img
                 src={filterImg1}
                 width="50px"
@@ -32,13 +32,13 @@ class Categorytype extends Component {
                 alt="offers near you"
               />
             </div>
-            <div class="filter-data-text">
-              <div class="heading">Offers Near You</div>
-              <div class="para">104 OPTIONS</div>
+            <div className="filter-data-text">
+              <div className="heading">Offers Near You</div>
+              <div className="para">104 OPTIONS</div>
             </div>
           </div>
-          <div class="filter-item">
-            <div class="fliter-data-img">
+          <div className="filter-item">
+            <div className="fliter-data-img">
               <img
                 src={filterImg1}
                 width="50px"
@@ -46,13 +46,13 @@ class Categorytype extends Component {
                 alt="offers near you"
               />
             </div>
-            <div class="filter-data-text">
-              <div class="heading">Popular Brands</div>
-              <div class="para">114 OPTIONS</div>
+            <div className="filter-data-text">
+              <div className="heading">Popular Brands</div>
+              <div className="para">114 OPTIONS</div>
             </div>
           </div>
-          <div class="filter-item">
-            <div class="fliter-data-img">
+          <div className="filter-item">
+            <div className="fliter-data-img">
               <img
                 src={filterImg1}
                 width="50px"
@@ -60,13 +60,13 @@ class Categorytype extends Component {
                 alt="offers near you"
               />
             </div>
-            <div class="filter-data-text">
-              <div class="heading">Popular Brands</div>
-              <div class="para">114 OPTIONS</div>
+            <div className="filter-data-text">
+              <div className="heading">Popular Brands</div>
+              <div className="para">114 OPTIONS</div>
             </div>
           </div>
-          <div class="filter-item">
-            <div class="fliter-data-img">
+          <div className="filter-item">
+            <div className="fliter-data-img">
               <img
                 src={filterImg1}
                 width="50px"
@@ -74,13 +74,13 @@ class Categorytype extends Component {
                 alt="offers near you"
               />
             </div>
-            <div class="filter-data-text">
-              <div class="heading">Popular Brands</div>
-              <div class="para">114 OPTIONS</div>
+            <div className="filter-data-text">
+              <div className="heading">Popular Brands</div>
+              <div className="para">114 OPTIONS</div>
             </div>
           </div>
-          <div class="filter-item">
-            <div class="fliter-data-img">
+          <div className="filter-item">
+            <div className="fliter-data-img">
               <img
                 src={filterImg1}
                 width="50px"
@@ -88,13 +88,13 @@ class Categorytype extends Component {
                 alt="offers near you"
               />
             </div>
-            <div class="filter-data-text">
-              <div class="heading">Popular Brands</div>
-              <div class="para">114 OPTIONS</div>
+            <div className="filter-data-text">
+              <div className="heading">Popular Brands</div>
+              <div className="para">114 OPTIONS</div>
             </div>
           </div>
-          <div class="filter-item">
-            <div class="fliter-data-img">
+          <div className="filter-item">
+            <div className="fliter-data-img">
               <img
                 src={filterImg1}
                 width="50px"
@@ -102,13 +102,13 @@ class Categorytype extends Component {
                 alt="offers near you"
               />
             </div>
-            <div class="filter-data-text">
-              <div class="heading">Popular Brands</div>
-              <div class="para">114 OPTIONS</div>
+            <div className="filter-data-text">
+              <div className="heading">Popular Brands</div>
+              <div className="para">114 OPTIONS</div>
             </div>
           </div>
-          <div class="filter-item">
-            <div class="fliter-data-img">
+          <div className="filter-item">
+            <div className="fliter-data-img">
               <img
                 src={filterImg1}
                 width="50px"
@@ -116,13 +116,13 @@ class Categorytype extends Component {
                 alt="offers near you"
               />
             </div>
-            <div class="filter-data-text">
-              <div class="heading">Popular Brands</div>
-              <div class="para">114 OPTIONS</div>
+            <div className="filter-data-text">
+              <div className="heading">Popular Brands</div>
+              <div className="para">114 OPTIONS</div>
             </div>
           </div>
-          <div class="filter-item">
-            <div class="fliter-data-img">
+          <div className="filter-item">
+            <div className="fliter-data-img">
               <img
                 src={filterSeal}
                 width="50px"
@@ -130,9 +130,9 @@ class Categorytype extends Component {
                 alt="offers near you"
               />
             </div>
-            <div class="filter-data-text">
-              <div class="heading">SEE ALL</div>
-              <div class="para">541 OPTIONS</div>
+            <div className="filter-data-text">
+              <div className="heading">SEE ALL</div>
+              <div className="para">541 OPTIONS</div>
             </div>
           </div>
         </div>

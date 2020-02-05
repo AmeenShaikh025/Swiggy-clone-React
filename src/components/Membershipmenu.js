@@ -6,11 +6,11 @@ import swiggyorder from "../images/swiggy-order.png";
 
 function Membershipmenu() {
   return (
-    <section class="membership-menu">
-      <div class="membership-container">
-        <div class="membership-first">
-          <div class="membership-img">
-            <div class="membership-img_1">
+    <section className="membership-menu">
+      <div className="membership-container">
+        <div className="membership-first">
+          <div className="membership-img">
+            <div className="membership-img_1">
               <img
                 src={swiggypop}
                 alt="swiggy pop"
@@ -18,7 +18,7 @@ function Membershipmenu() {
                 height="60px"
               />
             </div>
-            <div class="membership-img_2">
+            <div className="membership-img_2">
               <img
                 src={swiggypoptwo}
                 alt="swiggy pop"
@@ -27,17 +27,17 @@ function Membershipmenu() {
               />
             </div>
           </div>
-          <div class="membership-text">
+          <div className="membership-text">
             <h3>Introducing Swiggy Pop</h3>
             <p>Single Serve Meals, Free Delivery, No Extra Charges</p>
           </div>
-          <div class="mebership-button">
-            <button class="btn-common">order now</button>
+          <div className="mebership-button">
+            <button className="btn-common">order now</button>
           </div>
         </div>
-        <div class="membership-second">
-          <div class="membership-img">
-            <div class="membership-img_1">
+        <div className="membership-second">
+          <div className="membership-img">
+            <div className="membership-img_1">
               <img
                 src={swiggyorder}
                 alt="swiggy order"
@@ -46,15 +46,15 @@ function Membershipmenu() {
               />
             </div>
           </div>
-          <div class="membership-text">
+          <div className="membership-text">
             <h3>Introducing Swiggy SUPER</h3>
             <p>
               The membership program you've been waiting for.
               <span>Grab it at unbelievable introductory prices!</span>
             </p>
           </div>
-          <div class="mebership-button">
-            <button class="btn-common">get super now</button>
+          <div className="mebership-button">
+            <button className="btn-common">get super now</button>
           </div>
         </div>
       </div>
