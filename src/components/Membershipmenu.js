@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import swiggypop from "../images/swiggy-pop.jpeg";
 import swiggypoptwo from "../images/swiggy-pop2.jpeg";

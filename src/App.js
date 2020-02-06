@@ -9,12 +9,7 @@ import Restaurantcarousel from "./components/Restaurantcarousel";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Allrestaurants from "./components/Allrestaurants";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
   return (

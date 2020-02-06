@@ -9,10 +9,61 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 
 class RestaurantMenu extends Component {
-  state = {
-    items: {},
-    categorisedItems: {}
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: {},
+      categorisedItems: {},
+      cart: {},
+      total: 0,
+      currItemPrice: {},
+      currentItemId: {}
+    };
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleDec = this.handleDec.bind(this);
+  }
+
+  handleAdd(name, id) {
+    Object.entries(this.state.items).map(([k, v]) => {
+      if (v.id === id) {
+        const currentItemPrice = parseInt(v.price.toString().slice(0, -2));
+        this.setState({
+          total: this.state.total + parseInt(v.price.toString().slice(0, -2)),
+          currItemPrice: {
+            ...this.state.currItemPrice,
+            [name]: currentItemPrice
+          },
+          currentItemId: {
+            ...this.state.currentItemId,
+            [name]: id
+          }
+        });
+      }
+    });
+    this.setState({
+      cart: {
+        ...this.state.cart,
+        [name]: (this.state.cart[name] || 0) + 1
+      }
+    });
+  }
+
+  handleDec(name, id) {
+    Object.entries(this.state.items).map(([k, v]) => {
+      if (v.id === id) {
+        //console.log(v.price.toString().slice(0, -2));
+        this.setState({
+          total: this.state.total - parseInt(v.price.toString().slice(0, -2))
+        });
+      }
+    });
+    this.setState({
+      cart: {
+        ...this.state.cart,
+        [name]: this.state.cart[name] - 1
+      }
+    });
+  }
 
   componentDidMount() {
     let self = this;
@@ -50,6 +101,8 @@ class RestaurantMenu extends Component {
   }
 
   render() {
+    //console.log(this.state);
+    const { items, cart, total, currItemPrice, currentItemId } = this.state;
     const menuItems = Object.entries(this.state.categorisedItems).map(
       ([k, v]) => {
         return (
@@ -81,10 +134,38 @@ class RestaurantMenu extends Component {
                             <p>Burger</p>
                           </div>
                           <div className="card-details">
-                            <div className="price">₹ {item[3]}</div>
-                            <div className="add-cart-btn">
-                              <button className="btn-white">ADD</button>
+                            <div className="price">
+                              ₹ {item[3].toString().slice(0, -2)}
                             </div>
+
+                            {this.state.cart[item[2]] > 0 ? (
+                              <div className="cart-counter-btn">
+                                <div className="btn-white">
+                                  <div
+                                    onClick={() =>
+                                      this.handleDec(item[2], item[1])
+                                    }
+                                  >
+                                    -
+                                  </div>
+                                  <div>{this.state.cart[item[2]]}</div>
+                                  <div
+                                    onClick={() =>
+                                      this.handleAdd(item[2], item[1])
+                                    }
+                                  >
+                                    +
+                                  </div>
+                                </div>
+                              </div>
+                            ) : (
+                              <div
+                                className="add-cart-btn"
+                                onClick={() => this.handleAdd(item[2], item[1])}
+                              >
+                                <button className="btn-white">ADD</button>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -104,7 +185,15 @@ class RestaurantMenu extends Component {
         <div className="container">
           <div className="itemBox">{menuItems}</div>
           <div className="cartBox">
-            <Restaurantcart />
+            <Restaurantcart
+              cart={cart}
+              items={items}
+              add={this.handleAdd}
+              remove={this.handleDec}
+              total={total}
+              currItemPrice={currItemPrice}
+              currentItemId={currentItemId}
+            />
           </div>
           <Restaurantmobilecart />
         </div>

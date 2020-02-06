@@ -96,6 +96,7 @@ header {
   right: 0;
   background-color: var(--white-color);
   z-index: 999;
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
 }
 header .main-nav {
   display: -webkit-box;
@@ -1201,6 +1202,37 @@ header .menu ul li a span:nth-of-type(2) {
   flex: 1;
   text-align: right;
 }
+.cart .row:nth-of-type(2) .item-data_cards .card-details > :nth-of-type(3) {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
+}
+.cart .row:nth-of-type(2) .item-data_cards .card-details .btn-white {
+  display: flex;
+  margin-left: auto;
+}
+.cart
+  .row:nth-of-type(2)
+  .item-data_cards
+  .card-details
+  .add-cart-btn
+  .btn-white {
+  padding: 0.7rem 1rem;
+}
+.cart
+  .row:nth-of-type(2)
+  .item-data_cards
+  .card-details
+  .btn-white
+  > div:first-child {
+  color: var(--btn-grey);
+}
+.cart .row:nth-of-type(2) .item-data_cards .card-details .btn-white > div {
+  flex: 1 1;
+  text-align: center;
+  font-size: 1.1rem;
+}
 .cart .row:nth-of-type(2) .item-data_cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1230,8 +1262,18 @@ header .menu ul li a span:nth-of-type(2) {
   position: sticky;
   top: 100px;
 }
+/* For Scrolling effect for cartItems */
+.carItems {
+  height: 250px;
+  overflow: auto;
+}
+.carItems-noscroll {
+  height: auto;
+  overflow: hidden;
+}
+/* For Scrolling effect for cartItems */
 .cart .cartBox .cart-info h2,
-.cart .cartBox) .cart-info p {
+.cart .cartBox .cart-info p {
   margin-top: 0;
   margin-bottom: 0.3rem;
 }
